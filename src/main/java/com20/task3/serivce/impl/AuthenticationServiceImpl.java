@@ -4,13 +4,12 @@ import com20.task3.config.jwtConfig.JwtService;
 import com20.task3.dto.authenticationDto.AuthenticationResponse;
 import com20.task3.dto.authenticationDto.SignInRequest;
 import com20.task3.dto.authenticationDto.SignUpRequest;
-import com20.task3.dto.authenticationDto.UserResponse;
+import com20.task3.dto.userDto.UserResponse;
 import com20.task3.entity.User;
 import com20.task3.enums.Role;
 import com20.task3.globalException.AlreadyExistsException;
 import com20.task3.globalException.BadCredentialException;
 import com20.task3.repository.UserRepository;
-import com20.task3.repository.dao.UserDao;
 import com20.task3.serivce.AuthenticationService;
 import jakarta.annotation.PostConstruct;
 import lombok.Builder;
@@ -26,11 +25,11 @@ import java.util.List;
 @Service
 @Builder
 @Slf4j
-public class AuthenticationImpl implements AuthenticationService {
+public class AuthenticationServiceImpl implements AuthenticationService {
     private final UserRepository userRepository;
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
-    private final UserDao userDao;
+
 
     @Override
     public AuthenticationResponse signUp(SignUpRequest signUpRequest) {
@@ -44,7 +43,7 @@ public class AuthenticationImpl implements AuthenticationService {
                 .lastName(signUpRequest.getLastName())
                 .email(signUpRequest.getEmail())
                 .password(passwordEncoder.encode(signUpRequest.getPassword()))
-                .role(Role.USER)
+                .role(Role.ADMIN)
                 .build();
         userRepository.save(user);
         log.info("User saved");
@@ -88,7 +87,7 @@ public class AuthenticationImpl implements AuthenticationService {
 
     @Override
     public List<UserResponse> getAllUsers() {
-        return userDao.getAll();
+        return userRepository.getAll();
     }
 
     @PostConstruct

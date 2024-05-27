@@ -3,7 +3,7 @@ package com20.task3.api;
 import com20.task3.dto.authenticationDto.AuthenticationResponse;
 import com20.task3.dto.authenticationDto.SignInRequest;
 import com20.task3.dto.authenticationDto.SignUpRequest;
-import com20.task3.dto.authenticationDto.UserResponse;
+import com20.task3.dto.userDto.UserResponse;
 import com20.task3.serivce.AuthenticationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

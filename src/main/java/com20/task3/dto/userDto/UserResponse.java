@@ -1,0 +1,32 @@
+package com20.task3.dto.userDto;
+
+import com20.task3.entity.User;
+import com20.task3.enums.Role;
+import lombok.Builder;
+
+import java.time.LocalDate;
+
+@Builder
+public record UserResponse(
+        Long id,
+        String firstName,
+        String lastName,
+        String email,
+        String password,
+        String phoneNumber,
+        Role role
+) {
+
+    public static UserResponse entityToResponse(User user) {
+        return UserResponse.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .phoneNumber(user.getPhoneNumber())
+                .role(user.getRole())
+                .build();
+
+    }
+}
