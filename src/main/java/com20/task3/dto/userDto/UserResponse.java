@@ -4,8 +4,6 @@ import com20.task3.entity.User;
 import com20.task3.enums.Role;
 import lombok.Builder;
 
-import java.time.LocalDate;
-
 @Builder
 public record UserResponse(
         Long id,

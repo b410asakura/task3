@@ -22,7 +22,7 @@ public class UserApi {
 
     private final UserService userService;
 
-    @GetMapping("getAll")
+    @GetMapping("/getAll")
     @Operation(summary = "to get all users")
     List<UserResponse> getAll() {
         return userService.getAll();

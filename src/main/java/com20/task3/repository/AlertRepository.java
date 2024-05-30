@@ -1,4 +1,15 @@
 package com20.task3.repository;
 
-public interface AlertRepository {
+import com20.task3.dto.alertDto.AlertResponse;
+import com20.task3.entity.Alert;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface AlertRepository extends JpaRepository<Alert, Long> {
+    @Query("select new com20.task3.dto.alertDto.AlertResponse(a.id, a.info) from Alert a")
+    List<AlertResponse> getAll();
 }
