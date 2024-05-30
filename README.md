@@ -69,4 +69,4 @@ This project aims to design and implement a comprehensive Supplier Relationship 
 
 ## Video Demonstration
 
-Video demonstration of the API in action can be found [here](https://drive.google.com/file/d/1oXISeaxB2x-xb0hn2BOnXAKtu9HPAZZM/view?usp=drive_link)
+Video demonstration of the API in action can be found [here](https://drive.google.com/file/d/1UFfBEkdoXONptCqlmox1UMsHXSyNTzcm/view?usp=sharing)
