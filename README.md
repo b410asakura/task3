@@ -5,13 +5,13 @@ TechTrack is a platform designed for monitoring and managing technical equipment
 The API supports basic authentication and authorization, allowing only authorized users to access and manipulate the data. It is designed to handle simultaneous requests from multiple clients and ensure high data availability.
 
 ## Features
--**User Management**: Create, read, update, and delete users with basic authentication and authorization.
--**Equipment Management**: CRUD operations for equipment data.
--**Data Management**: Store and retrieve equipment status indicators such as temperature, speed, and pressure.
--**Alert Management**: Manage alerts related to equipment, including warnings about possible failures or abnormal situations.
--**Concurrency Handling**: Optimistic locking for concurrent data updates.
--**Comprehensive Error Handling**: Return appropriate HTTP statuses and messages for different scenarios.
--**API Documentation**: Detailed API specification using Swagger/OpenAPI.
+- **User Management**: Create, read, update, and delete users with basic authentication and authorization.
+- **Equipment Management**: CRUD operations for equipment data.
+- **Data Management**: Store and retrieve equipment status indicators such as temperature, speed, and pressure.
+- **Alert Management**: Manage alerts related to equipment, including warnings about possible failures or abnormal situations.
+- **Concurrency Handling**: Optimistic locking for concurrent data updates.
+- **Comprehensive Error Handling**: Return appropriate HTTP statuses and messages for different scenarios.
+- **API Documentation**: Detailed API specification using Swagger/OpenAPI.
 
 ## Technologies Used
 
