@@ -1,22 +1,17 @@
-# Restaurant Supplier Relationship Management (SRM) System
-
-Welcome to the Restaurant Supplier Relationship Management (SRM) System! This project aims to design and implement a comprehensive SRM system tailored for restaurants. The system facilitates efficient procurement processes, supplier management, and inventory control, enhancing the overall efficiency and performance of restaurant operations.
-
+# TechTrack Backend API
 ## Project Overview
+TechTrack is a platform designed for monitoring and managing technical equipment such as industrial robots, manufacturing equipment, quality control systems, etc. The platform aims to solve the problem of managing data on the technical condition of equipment. This project implements a RESTful API to manage users and handle data related to equipment status, including monitoring temperature, speed, pressure, and alerting on abnormal situations.
 
-This project aims to design and implement a comprehensive Supplier Relationship Management (SRM) system for optimizing procurement processes, managing supplier relationships, and streamlining operations within the restaurant industry. The system will facilitate efficient order processing, vendor management, and inventory control, enhancing the overall efficiency and performance of restaurant operations.
+The API supports basic authentication and authorization, allowing only authorized users to access and manipulate the data. It is designed to handle simultaneous requests from multiple clients and ensure high data availability.
 
 ## Features
-
-- **Order Processing**: Efficiently manage orders from suppliers, including placing orders, tracking deliveries, and managing invoices.
-  
-- **Supplier Management**: Maintain a database of suppliers, track supplier performance, and manage relationships to ensure quality and reliability of deliveries.
-  
-- **Inventory Control**: Monitor inventory levels, track stock movements, and optimize inventory management to prevent stockouts and reduce excess inventory.
-  
-- **Menu Creation**: Streamline menu creation by integrating with the inventory system to automatically update menu items based on ingredient availability.
-  
-- **Staff Hiring**: Facilitate staff hiring processes, including posting job openings, managing applications, and scheduling interviews.
+-**User Management**: Create, read, update, and delete users with basic authentication and authorization.
+-**Equipment Management**: CRUD operations for equipment data.
+-**Data Management**: Store and retrieve equipment status indicators such as temperature, speed, and pressure.
+-**Alert Management**: Manage alerts related to equipment, including warnings about possible failures or abnormal situations.
+-**Concurrency Handling**: Optimistic locking for concurrent data updates.
+-**Comprehensive Error Handling**: Return appropriate HTTP statuses and messages for different scenarios.
+-**API Documentation**: Detailed API specification using Swagger/OpenAPI.
 
 ## Technologies Used
 
